@@ -29,9 +29,7 @@
         <div class="steps">
           <!-- for one step of the form -->
           <div class="step step--1">
-            <button type="button" class="btn step__number step--active">
-              1
-            </button>
+            <button type="button" class="btn step__number active">1</button>
             <div class="step__info">
               <div class="step__tag">step 1</div>
               <div class="step__title">Your info</div>
@@ -64,325 +62,335 @@
 
       <!-- Personal INFO SECTION -->
       <div class="main">
-        <div class="personal-info hide" data-step="step--1">
-          <div class="section__heading">
-            <div class="section__title">Personal info</div>
-            <div class="section__subtitle">
-              Please provide your name, email address, and phone number.
-            </div>
-          </div>
-          <div class="form">
-            <div class="form__group">
-              <label for="name" class="form__label">Name</label>
-              <input
-                type="text"
-                id="name"
-                class="form__input"
-                placeholder="e.g. Stephen King"
-              />
-            </div>
-            <div class="form__group">
-              <label for="email" class="form__label">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                class="form__input"
-                placeholder=" e.g. stephenking@lorem.com"
-              />
-            </div>
-            <div class="form__group">
-              <label for="phone-number" class="form__label">Phone Number</label>
-              <input
-                type="text"
-                id="phone-number"
-                class="form__input form__input--error"
-                placeholder="e.g. +1 234 567 890"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Select  YOUR PLAN SECTION -->
-        <div class="select-plan hide" data-step="step--2">
-          <div class="section__heading">
-            <div class="section__title">Select your plan</div>
-            <div class="section__subtitle">
-              You have the option of monthly or yearly billing.
-            </div>
-          </div>
-
-          <div class="plans">
-            <div class="plan plan--arcade active">
-              <img
-                src="./assets/images/icon-arcade.svg"
-                alt="icon-arcade"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Arcade</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">9</span>/mo</span
-              >
-            </div>
-            <div class="plan plan--advanced">
-              <img
-                src="./assets/images/icon-advanced.svg"
-                alt="icon-advanced"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Advanced</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">12</span>/mo</span
-              >
-            </div>
-            <div class="plan plan--pro">
-              <img
-                src="./assets/images/icon-pro.svg"
-                alt="icon-pro"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Pro</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">16</span>/mo</span
-              >
-            </div>
-          </div>
-          <div class="plans hide">
-            <div class="plan plan--arcade active">
-              <img
-                src="./assets/images/icon-arcade.svg"
-                alt="icon-arcade"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Arcade</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">90</span>/yr</span
-              >
-              <p class="plan__trial">2 months free</p>
-            </div>
-            <div class="plan plan--advanced">
-              <img
-                src="./assets/images/icon-advanced.svg"
-                alt="icon-advanced"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Advanced</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">120</span>/yr</span
-              >
-              <p class="plan__trial">2 months free</p>
-            </div>
-            <div class="plan plan--pro">
-              <img
-                src="./assets/images/icon-pro.svg"
-                alt="icon-pro"
-                class="plan__icon"
-              />
-
-              <p class="plan__description">Pro</p>
-              <span class="plan__cost-per-month"
-                >$<span class="plan__amount">150</span>/yr</span
-              >
-              <p class="plan__trial">2 months free</p>
-            </div>
-          </div>
-
-          <div class="plan__timeline">
-            <div class="plan-time monthly active">Monthly</div>
-            <div class="plan__toggle">
-              <input
-                type="radio"
-                id="monthly"
-                name="timeline"
-                value="monthly"
-                title="monthly"
-                class="plan-time__input"
-              />
-              <input
-                type="radio"
-                id="yearly"
-                name="timeline"
-                value="yearly"
-                title="yearly"
-                class="plan-time__input hide"
-              />
-            </div>
-            <div class="plan-time yearly">Yearly</div>
-          </div>
-        </div>
-
-        <!-- Pick ADD-ONS SECTION -->
-        <div class="pick-add-ons hide" data-step="step--3">
-          <div class="section__heading">
-            <div class="section__title">Pick add-ons</div>
-            <div class="section__subtitle">
-              Add-ons help enhance your gaming experience.
-            </div>
-          </div>
-
-          <div class="add-ons monthly">
-            <label class="add-on" for="online-service-monthly">
-              <input
-                type="checkbox"
-                title="online-service-monthly"
-                id="online-service-monthly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Online service</p>
-                <p class="add-on__subtitle">Access to multiplayer games</p>
+        <div class="form-steps">
+          <div class="personal-info" data-step="step--1">
+            <div class="section__heading">
+              <div class="section__title">Personal info</div>
+              <div class="section__subtitle">
+                Please provide your name, email address, and phone number.
               </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">1</span>/mo</span
-              >
-            </label>
-            <label class="add-on" for="larger-storage-monthly">
-              <input
-                type="checkbox"
-                title="larger-storage-monthly"
-                id="larger-storage-monthly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Larger storage</p>
-                <p class="add-on__subtitle">Extra 1TB of cloud save</p>
+            </div>
+            <div class="form">
+              <div class="form__group">
+                <label for="name" class="form__label">
+                  <span class="form__title">Name</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form__input"
+                  placeholder="e.g. Stephen King"
+                />
               </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">2</span>/mo</span
-              >
-            </label>
-            <label class="add-on" for="customizable-profile-monthly">
-              <input
-                type="checkbox"
-                title="customizable-profile-monthly"
-                id="customizable-profile-monthly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Customizable profile</p>
-                <p class="add-on__subtitle">Custom theme on your profile</p>
+              <div class="form__group">
+                <label for="email" class="form__label"
+                  ><span class="form__title">Email Address</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="form__input"
+                  placeholder=" e.g. stephenking@lorem.com"
+                />
               </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">2</span>/mo</span
-              >
-            </label>
-          </div>
-          <div class="add-ons yearly hide">
-            <label class="add-on" for="online-service-yearly">
-              <input
-                type="checkbox"
-                title="online-service-yearly"
-                id="online-service-yearly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Online service</p>
-                <p class="add-on__subtitle">Access to multiplayer games</p>
+              <div class="form__group">
+                <label for="phone-number" class="form__label"
+                  ><span class="form__title">Phone Number</span></label
+                >
+                <input
+                  type="number"
+                  id="phone-number"
+                  class="form__input form__input"
+                  placeholder="e.g. +1 234 567 890"
+                />
               </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">10</span>/yr</span
-              >
-            </label>
-            <label class="add-on" for="larger-storage-yearly">
-              <input
-                type="checkbox"
-                title="larger-storage-yearly"
-                id="larger-storage-yearly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Larger storage</p>
-                <p class="add-on__subtitle">Extra 1TB of cloud save</p>
-              </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">20</span>/yr</span
-              >
-            </label>
-            <label class="add-on" for="customizable-profile-yearly">
-              <input
-                type="checkbox"
-                title="customizable-profile-yearly"
-                id="customizable-profile-yearly"
-                class="add-on__input"
-              />
-              <span class="add-on__checkmark"></span>
-              <div class="add-on__description">
-                <p class="add-on__title">Customizable profile</p>
-                <p class="add-on__subtitle">Custom theme on your profile</p>
-              </div>
-              <span class="add-on__price"
-                >+$<span class="add-on__amount">20</span>/yr</span
-              >
-            </label>
-          </div>
-        </div>
-
-        <!-- Finishing UP SECTION -->
-
-        <div class="finish-up hide">
-          <div class="section__heading">
-            <div class="section__title">Finishing up</div>
-            <div class="section__subtitle">
-              You're almost done. Just fill in your details below.
             </div>
           </div>
 
-          <div class="review">
-            <!-- plan review -->
-            <div class="plan-review">
-              <div class="plan-review__title">
-                <span class="plan-review__name">Arcade(Monthly)</span>
-                <button type="button" class="btn plan-review__btn">
-                  Change
-                </button>
-              </div>
-              <div class="plan-review__price">
-                $<span class="plan-review__value">9</span>/mo
+          <!-- Select  YOUR PLAN SECTION -->
+          <div class="select-plan hide" data-step="step--2">
+            <div class="section__heading">
+              <div class="section__title">Select your plan</div>
+              <div class="section__subtitle">
+                You have the option of monthly or yearly billing.
               </div>
             </div>
 
-            <!-- add ons review -->
-            <div class="add-ons-review">
-              <div class="add-on-review">
-                <span class="add-on-review__title">Online service</span>
-                <span class="add-on-review__price">+$<span>1</span>/mo</span>
+            <div class="plans">
+              <div class="plan plan--arcade active">
+                <img
+                  src="./assets/images/icon-arcade.svg"
+                  alt="icon-arcade"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Arcade</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">9</span>/mo</span
+                >
+              </div>
+              <div class="plan plan--advanced">
+                <img
+                  src="./assets/images/icon-advanced.svg"
+                  alt="icon-advanced"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Advanced</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">12</span>/mo</span
+                >
+              </div>
+              <div class="plan plan--pro">
+                <img
+                  src="./assets/images/icon-pro.svg"
+                  alt="icon-pro"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Pro</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">16</span>/mo</span
+                >
+              </div>
+            </div>
+            <div class="plans hide">
+              <div class="plan plan--arcade active">
+                <img
+                  src="./assets/images/icon-arcade.svg"
+                  alt="icon-arcade"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Arcade</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">90</span>/yr</span
+                >
+                <p class="plan__trial">2 months free</p>
+              </div>
+              <div class="plan plan--advanced">
+                <img
+                  src="./assets/images/icon-advanced.svg"
+                  alt="icon-advanced"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Advanced</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">120</span>/yr</span
+                >
+                <p class="plan__trial">2 months free</p>
+              </div>
+              <div class="plan plan--pro">
+                <img
+                  src="./assets/images/icon-pro.svg"
+                  alt="icon-pro"
+                  class="plan__icon"
+                />
+
+                <p class="plan__description">Pro</p>
+                <span class="plan__cost-per-month"
+                  >$<span class="plan__amount">150</span>/yr</span
+                >
+                <p class="plan__trial">2 months free</p>
               </div>
             </div>
 
-            <!-- Total amount per month -->
-          </div>
-          <div class="total-plan">
-            <div class="total-plan__type">Total (per month)</div>
-            <div class="total-plan__price">
-              +$<span class="total-plan__value">12</span>/mo
+            <div class="plan__timeline">
+              <div class="plan-time monthly active">Monthly</div>
+              <div class="plan__toggle">
+                <input
+                  type="radio"
+                  id="monthly"
+                  name="timeline"
+                  value="monthly"
+                  title="monthly"
+                  class="plan-time__input"
+                />
+                <input
+                  type="radio"
+                  id="yearly"
+                  name="timeline"
+                  value="yearly"
+                  title="yearly"
+                  class="plan-time__input hide"
+                />
+              </div>
+              <div class="plan-time yearly">Yearly</div>
             </div>
           </div>
-        </div>
 
-        <!-- Thank YOU SECTION -->
-        <div class="thank-you hide">
-          <img src="./assets/images/icon-thank-you.svg" alt="icon-thank-you" />
-          <div class="thank-you__title">Thank you!</div>
-          <div class="thank-you__subtitle">
-            Thanks for confirming your subscription! We hope you have fun using
-            our platform. If you ever need support, please feel free to email us
-            at support@loremgaming.com.
+          <!-- Pick ADD-ONS SECTION -->
+          <div class="pick-add-ons hide" data-step="step--3">
+            <div class="section__heading">
+              <div class="section__title">Pick add-ons</div>
+              <div class="section__subtitle">
+                Add-ons help enhance your gaming experience.
+              </div>
+            </div>
+
+            <div class="add-ons monthly">
+              <label class="add-on" for="online-service-monthly">
+                <input
+                  type="checkbox"
+                  title="online-service-monthly"
+                  id="online-service-monthly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Online service</p>
+                  <p class="add-on__subtitle">Access to multiplayer games</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">1</span>/mo</span
+                >
+              </label>
+              <label class="add-on" for="larger-storage-monthly">
+                <input
+                  type="checkbox"
+                  title="larger-storage-monthly"
+                  id="larger-storage-monthly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Larger storage</p>
+                  <p class="add-on__subtitle">Extra 1TB of cloud save</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">2</span>/mo</span
+                >
+              </label>
+              <label class="add-on" for="customizable-profile-monthly">
+                <input
+                  type="checkbox"
+                  title="customizable-profile-monthly"
+                  id="customizable-profile-monthly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Customizable profile</p>
+                  <p class="add-on__subtitle">Custom theme on your profile</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">2</span>/mo</span
+                >
+              </label>
+            </div>
+            <div class="add-ons yearly hide">
+              <label class="add-on" for="online-service-yearly">
+                <input
+                  type="checkbox"
+                  title="online-service-yearly"
+                  id="online-service-yearly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Online service</p>
+                  <p class="add-on__subtitle">Access to multiplayer games</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">10</span>/yr</span
+                >
+              </label>
+              <label class="add-on" for="larger-storage-yearly">
+                <input
+                  type="checkbox"
+                  title="larger-storage-yearly"
+                  id="larger-storage-yearly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Larger storage</p>
+                  <p class="add-on__subtitle">Extra 1TB of cloud save</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">20</span>/yr</span
+                >
+              </label>
+              <label class="add-on" for="customizable-profile-yearly">
+                <input
+                  type="checkbox"
+                  title="customizable-profile-yearly"
+                  id="customizable-profile-yearly"
+                  class="add-on__input"
+                />
+                <span class="add-on__checkmark"></span>
+                <div class="add-on__description">
+                  <p class="add-on__title">Customizable profile</p>
+                  <p class="add-on__subtitle">Custom theme on your profile</p>
+                </div>
+                <span class="add-on__price"
+                  >+$<span class="add-on__amount">20</span>/yr</span
+                >
+              </label>
+            </div>
+          </div>
+
+          <!-- Finishing UP SECTION -->
+          <div class="finish-up hide">
+            <div class="section__heading">
+              <div class="section__title">Finishing up</div>
+              <div class="section__subtitle">
+                You're almost done. Just fill in your details below.
+              </div>
+            </div>
+
+            <div class="review">
+              <!-- plan review -->
+              <div class="plan-review">
+                <div class="plan-review__title">
+                  <span class="plan-review__name">Arcade(Monthly)</span>
+                  <button type="button" class="btn plan-review__btn">
+                    Change
+                  </button>
+                </div>
+                <div class="plan-review__price">
+                  $<span class="plan-review__value">9</span>/mo
+                </div>
+              </div>
+
+              <!-- add ons review -->
+              <div class="add-ons-review">
+                <div class="add-on-review">
+                  <span class="add-on-review__title">Online service</span>
+                  <span class="add-on-review__price">+$<span>1</span>/mo</span>
+                </div>
+              </div>
+
+              <!-- Total amount per month -->
+            </div>
+            <div class="total-plan">
+              <div class="total-plan__type">Total (per month)</div>
+              <div class="total-plan__price">
+                +$<span class="total-plan__value">12</span>/mo
+              </div>
+            </div>
+          </div>
+
+          <!-- Thank YOU SECTION -->
+          <div class="thank-you hide">
+            <img
+              src="./assets/images/icon-thank-you.svg"
+              alt="icon-thank-you"
+            />
+            <div class="thank-you__title">Thank you!</div>
+            <div class="thank-you__subtitle">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </div>
           </div>
         </div>
 
         <div class="btn-container">
           <button type="button" class="btn btn--back hide">Go Back</button>
-          <button type="button" class="btn btn--next hide">Next Step</button>
-          <button type="button" class="btn btn--confirm">Confirm</button>
+          <button type="button" class="btn btn--next">Next Step</button>
+          <button type="button" class="btn btn--confirm hide">Confirm</button>
         </div>
       </div>
     </div>
@@ -395,5 +403,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
