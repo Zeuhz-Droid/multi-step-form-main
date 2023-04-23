@@ -101,15 +101,15 @@ body {
   transition: all 0.1s;
 }
 
-.step--active {
+.step__number.active {
   color: var(--Marine-blue);
   background-color: var(--Light-blue);
 }
 
-.step__number:hover {
+/* .step__number:hover {
   color: var(--Marine-blue);
   background-color: var(--Light-blue);
-}
+} */
 
 .step__info {
   display: flex;
@@ -179,6 +179,16 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   color: var(--Marine-blue);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__error-msg {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--Strawberry-red);
+  margin-top: 0.5rem;
 }
 
 .form__input {
@@ -196,7 +206,7 @@ body {
   border: 2px solid var(--Purplish-blue);
 }
 
-.form__input--error {
+.form__input.error {
   border: 2px solid var(--Strawberry-red);
 }
 
