@@ -42,7 +42,7 @@ body {
 }
 
 .container {
-  width: 70vw;
+  /* width: 70vw; */
   height: 80vh;
   margin: 0 auto;
   background-color: var(--White);
@@ -130,11 +130,12 @@ body {
 /*PERSONAL INFO SECETION i.e SECTION STEP 1  */
 .main {
   width: 80%;
-  padding: 5rem;
+  padding: 3rem;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .personal-info,
@@ -228,6 +229,10 @@ body {
   justify-content: space-between;
 }
 
+.btn-container.hide {
+  display: none;
+}
+
 .btn--next,
 .btn--back,
 .btn--confirm {
@@ -287,27 +292,54 @@ body {
   display: none;
 }
 
-.plans {
-  display: flex;
-  gap: 1.5rem;
+.plans-container {
+  height: 20vh;
 }
 
-.plans.hide {
+.plans__monthly,
+.plans__yearly {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.1s;
+}
+
+.plan-container {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.1s;
+}
+
+.plans__yearly.hide,
+.plans__monthly.hide {
   display: none;
 }
 
 .plan {
-  width: 40%;
+  width: 100%;
   height: auto;
   padding: 1.5rem;
   border-radius: 1rem;
-  border: 1px solid var(--Light-gray);
-  transition: all 0.2s;
+  border: 1.5px solid var(--Light-gray);
+  transition: all 0.1s;
 }
 
-.plan.active,
 .plan:hover {
-  border: 1px solid var(--Purplish-blue);
+  border: 1.5px solid var(--Purplish-blue);
+}
+
+.plan-type__input {
+  display: none;
+}
+
+.plan-type__input--arcade:checked + .plan-arcade {
+  border: 1.5px solid var(--Purplish-blue);
+}
+.plan-type__input--advanced:checked + .plan-advanced {
+  border: 1.5px solid var(--Purplish-blue);
+}
+.plan-type__input--pro:checked + .plan-pro {
+  border: 1.5px solid var(--Purplish-blue);
 }
 
 .plan__icon {
@@ -345,7 +377,7 @@ body {
   font-weight: 700;
 }
 
-.plan-time.active {
+.plan-time__title.active {
   color: var(--Marine-blue);
 }
 
@@ -356,32 +388,34 @@ body {
   border-radius: 1rem;
   background-color: var(--Marine-blue);
   overflow: hidden;
-}
-
-.plan-time__input {
-  height: 100%;
   position: relative;
 }
 
-.plan-time__input::after {
-  height: 100%;
-  width: 100%;
+.plan-time__label {
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
-  content: "";
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   background-color: var(--White);
+  opacity: 0;
+  transition: all 0.1s;
 }
 
-.plan-time__input.hide {
+.plan-time__input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50% 50%);
+  z-index: -1;
+  transition: all 0.2s;
   visibility: hidden;
 }
 
-/* .plan-time__input:checked::before {
-  visibility: visible;
-} */
+.plan-time__input:checked + .plan-time__label {
+  opacity: 1;
+}
 
 /* TEH PICK ADD-ONS SECTION */
 .pick-add-ons {
@@ -486,7 +520,7 @@ body {
   color: var(--Purplish-blue);
 }
 
-.add-ons.yearly.hide {
+.add-ons.hide {
   display: none;
 }
 
