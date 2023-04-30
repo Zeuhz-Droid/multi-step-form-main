@@ -18,7 +18,7 @@ const email = document.getElementById("email");
 const phoneNumber = document.getElementById("phone-number");
 
 const review = document.querySelector(".review");
-// const addOnsReview = document.querySelector(".add-ons-review");
+let planReviewBtn;
 
 const finishUp = document.querySelector(".finish-up");
 
@@ -34,6 +34,16 @@ btnConfirm.addEventListener("click", confirmInfo);
 
 let verifiedStep = 0;
 
+function showConfirm() {
+  btnNext.classList.add("hide");
+  btnConfirm.classList.remove("hide");
+}
+
+function showNext() {
+  btnNext.classList.remove("hide");
+  btnConfirm.classList.add("hide");
+}
+
 function nextStep() {
   if (verifiedStep == 0) if (!validateForm()) return;
   for (let i = 0; i < formSteps.length; i++) {
@@ -45,11 +55,9 @@ function nextStep() {
         stepNumbers[i].classList.remove("active");
         stepNumbers[i + 1].classList.add("active");
         if (++i == stepNumbers.length - 1) {
-          btnNext.classList.add("hide");
-          btnConfirm.classList.remove("hide");
+          showConfirm();
         } else {
-          btnNext.classList.remove("hide");
-          btnConfirm.classList.add("hide");
+          showNext();
         }
 
         break;
@@ -115,7 +123,7 @@ function removeFormError(elem) {
 }
 
 function checkChar(string) {
-  const format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+  const format = /([(0-9)!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])+/;
 
   if (format.test(string)) {
     return true;
@@ -139,7 +147,10 @@ function verify(elem) {
 
     if (elem == userName) {
       if (elem.value && checkChar(elem.value))
-        renderFormError(createFormElem(elem), `No special characters.`);
+        renderFormError(
+          createFormElem(elem),
+          `No special characters or numbers allowed.`
+        );
     }
 
     if (elem == email) {
@@ -260,6 +271,22 @@ function pickAddons(elem) {
   });
 }
 
+function navTochangePlan() {
+  for (let i = 0; i < formSteps.length; i++) {
+    formSteps[i].classList.add("hide");
+    stepNumbers[i]?.classList.remove("active");
+  }
+  verifiedStep = 1;
+  stepNumbers[1].classList.add("active");
+
+  document.querySelectorAll(".step__number")[1].classList.add("active");
+  document.querySelector(".btn-container").classList.remove("hide");
+  document.querySelector(".thank-you").classList.add("hide");
+  document.querySelector(".select-plan").classList.remove("hide");
+
+  showNext();
+}
+
 function renderUserInfo() {
   if (review) review.innerHTML = "";
   if (document.querySelector(".total-plan"))
@@ -318,6 +345,10 @@ function renderUserInfo() {
   });
 
   finishUp.insertAdjacentHTML("beforeend", totalHtml);
+
+  planReviewBtn = document.querySelector(".plan-review__btn");
+
+  planReviewBtn.addEventListener("click", navTochangePlan);
 }
 
 function calcTotal(user) {
