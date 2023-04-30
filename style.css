@@ -637,3 +637,170 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+.attribution.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 60%;
+  }
+
+  body {
+    height: max-content;
+    gap: 0;
+  }
+
+  .container {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    grid-template-columns: 1fr;
+
+    position: relative;
+  }
+
+  .sidebar {
+    background: url(./assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+  }
+
+  .main {
+    width: 100%;
+    padding: 0;
+
+    position: absolute;
+    top: 55%;
+  }
+
+  .personal-info,
+  .select-plan,
+  .pick-add-ons,
+  .finish-up,
+  .thank-you {
+    background-color: var(--White);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .btn-container {
+    background-color: var(--White);
+    padding: 2rem;
+  }
+
+  .section__title {
+    font-size: 2.3rem;
+  }
+
+  .section__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .form__steps {
+    margin: 2rem;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .steps {
+    width: 60vw;
+    gap: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .step {
+    margin-bottom: 0;
+  }
+
+  .step__number {
+    font-size: 1.8rem;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .step__info {
+    display: none;
+  }
+
+  .plans__monthly,
+  .plans__yearly {
+    flex-direction: column;
+  }
+
+  .plans-container {
+    height: auto;
+  }
+
+  .plan {
+    display: flex;
+    align-items: center;
+  }
+
+  .plan__description {
+    font-size: 1.5rem;
+  }
+
+  .plan__amount {
+    font-size: 1.4rem;
+  }
+
+  .plan__icon {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  .add-on {
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .add-on__title {
+    font-size: 1.5rem;
+  }
+
+  .add-on__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .btn--confirm,
+  .btn--next {
+    font-size: 1.5rem;
+  }
+
+  .btn--back {
+    font-size: 1.5rem;
+  }
+
+  .add-on__price {
+    font-size: 1.3rem;
+  }
+
+  .btn-container {
+    margin-top: 0;
+  }
+
+  .attribution.mobile {
+    display: block;
+    padding: 2rem;
+    position: relative;
+    bottom: -50rem;
+  }
+
+  .attribution.desktop {
+    display: none;
+  }
+}
