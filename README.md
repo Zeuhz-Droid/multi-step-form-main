@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-![desktop image of form](./assets/images/desktop-design-step-1.jpg.jpg)
+![desktop image of form](./assets/images/desktop-design-step-1.jpg)
 
 ### Links
 
